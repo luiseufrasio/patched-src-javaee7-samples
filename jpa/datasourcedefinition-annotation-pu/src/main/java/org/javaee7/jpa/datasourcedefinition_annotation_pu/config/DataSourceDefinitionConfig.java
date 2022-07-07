@@ -6,7 +6,7 @@ import jakarta.ejb.Stateless;
 @DataSourceDefinition(
     name = "java:app/MyApp/MyDS",
     className = "org.h2.jdbcx.JdbcDataSource",
-    url = "jdbc:h2:mem:test")
+    url = "jdbc:h2:mem:test;NON_KEYWORDS=VALUE")
 @Stateless
 public class DataSourceDefinitionConfig {
 }

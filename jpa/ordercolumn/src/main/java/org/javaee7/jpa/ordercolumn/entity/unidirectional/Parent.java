@@ -2,7 +2,7 @@ package org.javaee7.jpa.ordercolumn.entity.unidirectional;
 
 import static jakarta.persistence.CascadeType.ALL;
 import static jakarta.persistence.FetchType.EAGER;
-import static jakarta.persistence.GenerationType.IDENTITY;
+import static jakarta.persistence.GenerationType.AUTO;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -18,7 +18,7 @@ import jakarta.persistence.OrderColumn;
 public class Parent {
 
     @Id
-    @GeneratedValue(strategy = IDENTITY)
+    @GeneratedValue(strategy = AUTO)
     private Long id;
     
     @SuppressWarnings("unused")

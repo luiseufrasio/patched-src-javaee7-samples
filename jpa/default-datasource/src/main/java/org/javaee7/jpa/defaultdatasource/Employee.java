@@ -1,16 +1,9 @@
 package org.javaee7.jpa.defaultdatasource;
 
-import static jakarta.persistence.GenerationType.IDENTITY;
 
 import java.io.Serializable;
 
-import jakarta.persistence.Column;
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.Id;
-import jakarta.persistence.NamedQueries;
-import jakarta.persistence.NamedQuery;
-import jakarta.persistence.Table;
+import jakarta.persistence.*;
 
 /**
  * @author Arun Gupta
@@ -21,12 +14,16 @@ import jakarta.persistence.Table;
     @NamedQuery(
         name = "Employee.findAll",
         query = "SELECT e FROM Employee e") )
+
 public class Employee implements Serializable {
 
     private static final long serialVersionUID = 1L;
 
     @Id
-    @GeneratedValue(strategy = IDENTITY)
+    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "TEST_SEQUENCE_GENERATOR")
+    @SequenceGenerator(name = "TEST_SEQUENCE_GENERATOR",
+            sequenceName = "TEST_SEQ")
+    @Column
     private int id;
 
     @Column(length = 40)

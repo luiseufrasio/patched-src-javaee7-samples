@@ -1,6 +1,6 @@
 package org.javaee7.jpa.ordercolumn.entity.bidirectionaljoin;
 
-import static jakarta.persistence.GenerationType.IDENTITY;
+import static jakarta.persistence.GenerationType.AUTO;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -12,7 +12,7 @@ import jakarta.persistence.ManyToOne;
 public class Child {
 
     @Id
-    @GeneratedValue(strategy = IDENTITY)
+    @GeneratedValue(strategy = AUTO)
     private Long id;
     
     @SuppressWarnings("unused")
