@@ -1,10 +1,6 @@
 package org.javaee7.jpa.datasourcedefinition_webxml_pu.entity;
 
-import static jakarta.persistence.GenerationType.IDENTITY;
-
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
 
 /**
  * A very simple JPA entity that will be used for testing
@@ -16,8 +12,10 @@ import jakarta.persistence.Id;
 public class TestEntity {
 
     @Id
-    @GeneratedValue(strategy = IDENTITY)
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    @Column
     private Long id;
+    @Column
     private String value;
 
     public Long getId() {

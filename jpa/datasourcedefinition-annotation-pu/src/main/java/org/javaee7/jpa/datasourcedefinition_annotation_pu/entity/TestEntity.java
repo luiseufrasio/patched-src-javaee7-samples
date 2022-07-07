@@ -1,6 +1,6 @@
 package org.javaee7.jpa.datasourcedefinition_annotation_pu.entity;
 
-import static jakarta.persistence.GenerationType.IDENTITY;
+import static jakarta.persistence.GenerationType.AUTO;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -16,7 +16,7 @@ import jakarta.persistence.Id;
 public class TestEntity {
 
     @Id
-    @GeneratedValue(strategy = IDENTITY)
+    @GeneratedValue(strategy = AUTO)
     private Long id;
     private String value;
 
