@@ -52,7 +52,7 @@
                             
                             <verbose>true</verbose>
                             <sourceDestDir>${basedir}/src/main/java</sourceDestDir>
-                            <target>2.1</target>
+                            <target>3.0</target>
                         </configuration>
                     </execution>
                 </executions>
