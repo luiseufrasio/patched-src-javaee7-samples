@@ -39,6 +39,7 @@
  */
 package org.javaee7.concurrency.managedexecutor;
 
+import jakarta.enterprise.context.Dependent;
 import java.util.Objects;
 import jakarta.inject.Inject;
 import jakarta.transaction.Transactional;
@@ -46,6 +47,7 @@ import jakarta.transaction.Transactional;
 /**
  * @author Arun Gupta
  */
+@Dependent
 public class MyTaskWithTransaction implements Runnable {
 
     private int id;

@@ -68,8 +68,7 @@ public class ExecutorInjectTest {
                 MyTaskWithTransaction.class,
                 MyTransactionScopedBean.class,
                 TestBean.class).
-            setWebXML(new FileAsset(new File("src/main/webapp/WEB-INF/web.xml"))).
-            addAsWebInfResource(EmptyAsset.INSTANCE, "beans.xml"); // Adding beans.xml shouldn't be required? WildFly Beta1
+            setWebXML(new FileAsset(new File("src/main/webapp/WEB-INF/web.xml")));
     }
 
     @Before
