@@ -39,7 +39,7 @@
  */
 package org.javaee7.jpa.pu.typesafe;
 
-import jakarta.annotation.ManagedBean;
+import jakarta.enterprise.context.Dependent;
 import jakarta.enterprise.inject.Produces;
 import jakarta.persistence.EntityManager;
 import jakarta.persistence.PersistenceContext;
@@ -47,7 +47,7 @@ import jakarta.persistence.PersistenceContext;
 /**
  * @author Arun Gupta
  */
-@ManagedBean
+@Dependent
 public class ProducerBean {
     @Produces
     @PersistenceContext(unitName = "defaultPU")
