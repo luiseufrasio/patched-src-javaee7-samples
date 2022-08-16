@@ -19,6 +19,7 @@ package org.javaee7.jca.filewatch;
 import static com.jayway.awaitility.Awaitility.await;
 import static com.jayway.awaitility.Duration.FIVE_HUNDRED_MILLISECONDS;
 import static com.jayway.awaitility.Duration.ONE_MINUTE;
+import jakarta.enterprise.context.Dependent;
 import static java.lang.System.out;
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.javaee7.jca.filewatch.event.FileEvent.Type.CREATED;
@@ -52,6 +53,7 @@ import org.junit.runner.RunWith;
  * @author Bartosz Majsak (bartosz.majsak@gmail.com)
  */
 @RunWith(Arquillian.class)
+@Dependent
 public class FileWatcherTest {
 
     @Deployment
@@ -70,13 +72,11 @@ public class FileWatcherTest {
                     .addClasses(FileWatchingMDB.class)
                     // appropriate descriptor will be only picked up by the target container
                     .addAsManifestResource("glassfish-ejb-jar.xml")
-                    .addAsManifestResource("jboss-ejb3.xml")
-                    .addAsManifestResource(INSTANCE, "beans.xml"))
+                    .addAsManifestResource("jboss-ejb3.xml"))
             
             .addAsLibrary( 
                 create(JavaArchive.class, "test.jar")
-                    .addClasses(FileWatcherTest.class, FileEvent.class)
-                    .addAsManifestResource(INSTANCE, "beans.xml"))
+                    .addClasses(FileWatcherTest.class, FileEvent.class))
             
             .addAsLibraries(
                 Maven.resolver()
