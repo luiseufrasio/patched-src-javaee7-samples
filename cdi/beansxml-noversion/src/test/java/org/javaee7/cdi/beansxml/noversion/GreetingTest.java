@@ -9,9 +9,11 @@ import org.junit.Test;
 import org.junit.runner.RunWith;
 
 import jakarta.inject.Inject;
+import jakarta.enterprise.inject.Instance;
 
 import static org.hamcrest.CoreMatchers.is;
 import static org.hamcrest.CoreMatchers.notNullValue;
+import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertThat;
 
 /**
@@ -29,13 +31,13 @@ public class GreetingTest {
     @Inject
     AnnotatedBean annotatedBean;
     @Inject
-    NotAnnotatedBean notAnnotatedBean;
+    Instance<NotAnnotatedBean> notAnnotatedBean;
 
     @Test
     public void should_bean_be_injected() throws Exception {
         assertThat(annotatedBean, is(notNullValue()));
 
-        // notAnnotatedBean is injected because CDI acts as version 1.0 if version is not explicit
-        assertThat(notAnnotatedBean, is(notNullValue()));
+        // notAnnotatedBean is not injected because CDI 4.0 acts as the mode was annotated
+        assertFalse(notAnnotatedBean.isResolvable());
     }
 }
