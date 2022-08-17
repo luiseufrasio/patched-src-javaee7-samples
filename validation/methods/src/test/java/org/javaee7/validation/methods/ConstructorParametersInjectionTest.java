@@ -29,8 +29,7 @@ public class ConstructorParametersInjectionTest {
     @Deployment
     public static Archive<?> deployment() {
         return ShrinkWrap.create(JavaArchive.class)
-            .addClasses(MyBean2.class, MyParameter.class)
-            .addAsManifestResource(EmptyAsset.INSTANCE, "beans.xml");
+            .addClasses(MyBean2.class, MyParameter.class);
     }
 
     @Test

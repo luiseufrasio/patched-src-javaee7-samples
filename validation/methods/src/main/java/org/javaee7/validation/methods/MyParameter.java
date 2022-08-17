@@ -1,7 +1,9 @@
 package org.javaee7.validation.methods;
 
+import jakarta.enterprise.context.Dependent;
 import jakarta.validation.constraints.NotNull;
 
+@Dependent
 public class MyParameter {
 
     @NotNull
