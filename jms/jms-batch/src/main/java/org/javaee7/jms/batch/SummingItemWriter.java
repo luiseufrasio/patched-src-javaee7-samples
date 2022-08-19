@@ -1,6 +1,7 @@
 package org.javaee7.jms.batch;
 
 import jakarta.batch.api.chunk.AbstractItemWriter;
+import jakarta.enterprise.context.Dependent;
 import jakarta.inject.Inject;
 import jakarta.inject.Named;
 import java.io.Serializable;
@@ -10,6 +11,7 @@ import java.util.List;
  * @author Patrik Dudits
  */
 @Named
+@Dependent
 public class SummingItemWriter extends AbstractItemWriter {
     @Inject
     ResultCollector collector;

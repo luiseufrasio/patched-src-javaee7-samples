@@ -78,7 +78,6 @@ public class BatchCSVDatabaseTest {
         WebArchive war = ShrinkWrap.create(WebArchive.class)
             .addClass(BatchTestHelper.class)
             .addPackage("org.javaee7.batch.chunk.csv.database")
-            .addAsWebInfResource(EmptyAsset.INSTANCE, ArchivePaths.create("beans.xml"))
             .addAsResource("META-INF/batch-jobs/myJob.xml")
             .addAsResource("META-INF/persistence.xml")
             .addAsResource("META-INF/create.sql")

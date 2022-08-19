@@ -43,12 +43,14 @@ import static java.lang.System.out;
 import static jakarta.batch.runtime.BatchStatus.COMPLETED;
 
 import jakarta.batch.api.AbstractBatchlet;
+import jakarta.enterprise.context.Dependent;
 import jakarta.inject.Named;
 
 /**
  * @author Arun Gupta
  */
 @Named
+@Dependent
 public class MyBatchlet extends AbstractBatchlet {
     
     @Override

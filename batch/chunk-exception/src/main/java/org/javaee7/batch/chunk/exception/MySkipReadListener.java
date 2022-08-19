@@ -40,12 +40,14 @@
 package org.javaee7.batch.chunk.exception;
 
 import jakarta.batch.api.chunk.listener.SkipReadListener;
+import jakarta.enterprise.context.Dependent;
 import jakarta.inject.Named;
 
 /**
  * @author Arun Gupta
  */
 @Named
+@Dependent
 public class MySkipReadListener implements SkipReadListener {
     @Override
     public void onSkipReadItem(Exception e) throws Exception {

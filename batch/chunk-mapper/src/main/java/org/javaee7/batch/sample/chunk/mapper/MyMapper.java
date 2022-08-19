@@ -43,12 +43,14 @@ import java.util.Properties;
 import jakarta.batch.api.partition.PartitionMapper;
 import jakarta.batch.api.partition.PartitionPlan;
 import jakarta.batch.api.partition.PartitionPlanImpl;
+import jakarta.enterprise.context.Dependent;
 import jakarta.inject.Named;
 
 /**
  * @author Arun Gupta
  */
 @Named
+@Dependent
 public class MyMapper implements PartitionMapper {
 
     @Override

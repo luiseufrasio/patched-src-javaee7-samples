@@ -41,6 +41,7 @@ package org.javaee7.batch.sample.chunk.partition;
 
 import jakarta.batch.api.BatchProperty;
 import jakarta.batch.api.chunk.AbstractItemReader;
+import jakarta.enterprise.context.Dependent;
 import jakarta.inject.Inject;
 import jakarta.inject.Named;
 import java.io.Serializable;
@@ -50,6 +51,7 @@ import java.util.StringTokenizer;
  * @author Arun Gupta
  */
 @Named
+@Dependent
 public class MyItemReader extends AbstractItemReader {
     public static int totalReaders = 0;
     private int readerId;

@@ -40,6 +40,7 @@
 package org.javaee7.batch.chunk.exception;
 
 import jakarta.batch.api.chunk.AbstractItemReader;
+import jakarta.enterprise.context.Dependent;
 import jakarta.inject.Named;
 import java.io.Serializable;
 import java.util.StringTokenizer;
@@ -48,6 +49,7 @@ import java.util.StringTokenizer;
  * @author Arun Gupta
  */
 @Named
+@Dependent
 public class MyItemReader extends AbstractItemReader {
 
     private StringTokenizer tokens;

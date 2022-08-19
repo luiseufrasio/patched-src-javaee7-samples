@@ -41,6 +41,7 @@ package org.javaee7.batch.chunk.csv.database;
 
 import java.util.List;
 import jakarta.batch.api.chunk.AbstractItemWriter;
+import jakarta.enterprise.context.Dependent;
 import jakarta.inject.Named;
 import jakarta.persistence.EntityManager;
 import jakarta.persistence.PersistenceContext;
@@ -49,6 +50,7 @@ import jakarta.persistence.PersistenceContext;
  * @author Arun Gupta
  */
 @Named
+@Dependent
 public class MyItemWriter extends AbstractItemWriter {
 
     @PersistenceContext

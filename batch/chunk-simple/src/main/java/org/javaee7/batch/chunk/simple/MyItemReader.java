@@ -42,12 +42,14 @@ package org.javaee7.batch.chunk.simple;
 import java.io.Serializable;
 import java.util.StringTokenizer;
 import jakarta.batch.api.chunk.AbstractItemReader;
+import jakarta.enterprise.context.Dependent;
 import jakarta.inject.Named;
 
 /**
  * @author Arun Gupta
  */
 @Named
+@Dependent
 public class MyItemReader extends AbstractItemReader {
 
     private StringTokenizer tokens;

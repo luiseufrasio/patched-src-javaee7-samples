@@ -2,6 +2,7 @@ package org.javaee7.jms.batch;
 
 import jakarta.annotation.Resource;
 import jakarta.batch.api.chunk.AbstractItemReader;
+import jakarta.enterprise.context.Dependent;
 import jakarta.inject.Named;
 import jakarta.jms.ConnectionFactory;
 import jakarta.jms.JMSConsumer;
@@ -13,6 +14,7 @@ import java.io.Serializable;
  * @author Patrik Dudits
  */
 @Named
+@Dependent
 public class JmsItemReader extends AbstractItemReader {
 
     @Resource(lookup = Resources.CONNECTION_FACTORY)

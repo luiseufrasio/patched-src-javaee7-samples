@@ -45,6 +45,7 @@ import java.util.concurrent.atomic.AtomicInteger;
 import jakarta.batch.api.BatchProperty;
 import jakarta.batch.api.chunk.AbstractItemReader;
 import jakarta.batch.runtime.context.JobContext;
+import jakarta.enterprise.context.Dependent;
 import jakarta.inject.Inject;
 import jakarta.inject.Named;
 
@@ -52,6 +53,7 @@ import jakarta.inject.Named;
  * @author Arun Gupta
  */
 @Named
+@Dependent
 public class MyItemReader extends AbstractItemReader {
     static AtomicInteger totalReaders = new AtomicInteger();
     private int readerId;

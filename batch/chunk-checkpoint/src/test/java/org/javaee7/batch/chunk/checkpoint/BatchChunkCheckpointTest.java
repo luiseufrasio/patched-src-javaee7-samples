@@ -8,9 +8,7 @@ import static jakarta.batch.runtime.Metric.MetricType.READ_COUNT;
 import static jakarta.batch.runtime.Metric.MetricType.WRITE_COUNT;
 import static org.javaee7.batch.chunk.checkpoint.MyCheckpointAlgorithm.checkpointCountDownLatch;
 import static org.javaee7.util.BatchTestHelper.getMetricsMap;
-import static org.jboss.shrinkwrap.api.ArchivePaths.create;
 import static org.jboss.shrinkwrap.api.ShrinkWrap.create;
-import static org.jboss.shrinkwrap.api.asset.EmptyAsset.INSTANCE;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
 
@@ -72,7 +70,6 @@ public class BatchChunkCheckpointTest {
         WebArchive war = create(WebArchive.class)
             .addClass(BatchTestHelper.class)
             .addPackage("org.javaee7.batch.chunk.checkpoint")
-            .addAsWebInfResource(INSTANCE, create("beans.xml"))
             .addAsResource("META-INF/batch-jobs/myJob.xml");
         
         System.out.println("\nBatchChunkCheckpointTest test war content: \n" + war.toString(true) + "\n");
