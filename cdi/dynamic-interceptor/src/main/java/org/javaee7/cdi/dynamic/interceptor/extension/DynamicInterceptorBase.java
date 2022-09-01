@@ -48,11 +48,6 @@ public abstract class DynamicInterceptorBase<T> implements Interceptor<T>, Passi
     }
  
     @Override
-    public boolean isNullable() {
-        return false;
-    }
- 
-    @Override
     public String getName() {
         return null;
     }
