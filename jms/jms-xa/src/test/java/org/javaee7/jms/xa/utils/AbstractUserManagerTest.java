@@ -2,7 +2,6 @@ package org.javaee7.jms.xa.utils;
 
 import static org.javaee7.jms.xa.DeliveryStats.countDownLatch;
 import static org.jboss.shrinkwrap.api.ShrinkWrap.create;
-import static org.jboss.shrinkwrap.api.asset.EmptyAsset.INSTANCE;
 import static org.junit.Assert.assertEquals;
 
 import java.util.concurrent.CountDownLatch;
@@ -27,7 +26,6 @@ public class AbstractUserManagerTest {
 
     protected static WebArchive createWebArchive() {
         return create(WebArchive.class)
-                .addAsWebInfResource(INSTANCE, "beans.xml")
                 .addAsResource("META-INF/persistence.xml")
                 .addAsResource("META-INF/load.sql")
                 .addClass(AbstractUserManagerTest.class)

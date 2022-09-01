@@ -2,9 +2,7 @@ package org.javaee7.batch.batchlet.simple;
 
 import static jakarta.batch.runtime.BatchRuntime.getJobOperator;
 import static jakarta.batch.runtime.BatchStatus.COMPLETED;
-import static org.jboss.shrinkwrap.api.ArchivePaths.create;
 import static org.jboss.shrinkwrap.api.ShrinkWrap.create;
-import static org.jboss.shrinkwrap.api.asset.EmptyAsset.INSTANCE;
 import static org.junit.Assert.assertEquals;
 
 import java.util.Properties;
@@ -59,7 +57,6 @@ public class MyBatchletTest {
         war = create(WebArchive.class)
             .addClass(BatchTestHelper.class)
             .addClass(MyBatchlet.class)
-            .addAsWebInfResource(INSTANCE, create("beans.xml"))
             .addAsResource("META-INF/batch-jobs/myJob.xml");
         
         System.out.println(war.toString(true));

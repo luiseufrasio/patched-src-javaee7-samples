@@ -41,12 +41,14 @@ package org.javaee7.batch.decision;
 
 import jakarta.batch.api.Decider;
 import jakarta.batch.runtime.StepExecution;
+import jakarta.enterprise.context.Dependent;
 import jakarta.inject.Named;
 
 /**
  * @author Arun Gupta
  */
 @Named
+@Dependent
 public class MyDecider implements Decider {
 
     @Override

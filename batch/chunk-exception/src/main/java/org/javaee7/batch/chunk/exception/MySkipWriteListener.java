@@ -40,6 +40,7 @@
 package org.javaee7.batch.chunk.exception;
 
 import jakarta.batch.api.chunk.listener.SkipWriteListener;
+import jakarta.enterprise.context.Dependent;
 import jakarta.inject.Named;
 import java.util.List;
 
@@ -47,6 +48,7 @@ import java.util.List;
  * @author Arun Gupta
  */
 @Named
+@Dependent
 public class MySkipWriteListener implements SkipWriteListener {
     @Override
     public void onSkipWriteItem(List list, Exception e) throws Exception {

@@ -105,7 +105,6 @@ public class BatchChunkExceptionTest {
         WebArchive war = create(WebArchive.class)
             .addClass(BatchTestHelper.class)
             .addPackage("org.javaee7.batch.chunk.exception")
-            .addAsWebInfResource(INSTANCE, create("beans.xml"))
             .addAsResource("META-INF/batch-jobs/myJob.xml");
         
         System.out.println("\nContent of test war for BatchChunkExceptionTest \n " + war.toString(true) + "\n");

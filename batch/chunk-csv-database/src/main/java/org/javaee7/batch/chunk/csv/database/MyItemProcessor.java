@@ -43,12 +43,14 @@ import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.StringTokenizer;
 import jakarta.batch.api.chunk.ItemProcessor;
+import jakarta.enterprise.context.Dependent;
 import jakarta.inject.Named;
 
 /**
  * @author Arun Gupta
  */
 @Named
+@Dependent
 public class MyItemProcessor implements ItemProcessor {
     private static int id = 1;
     private SimpleDateFormat format = new SimpleDateFormat("M/dd/yy");

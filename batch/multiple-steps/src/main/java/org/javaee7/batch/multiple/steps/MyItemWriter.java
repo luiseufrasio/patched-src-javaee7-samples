@@ -41,12 +41,14 @@ package org.javaee7.batch.multiple.steps;
 
 import java.util.List;
 import jakarta.batch.api.chunk.AbstractItemWriter;
+import jakarta.enterprise.context.Dependent;
 import jakarta.inject.Named;
 
 /**
  * @author Arun Gupta
  */
 @Named
+@Dependent
 public class MyItemWriter extends AbstractItemWriter {
 
     @Override

@@ -41,12 +41,14 @@ package org.javaee7.batch.batch.listeners;
 
 import java.util.StringTokenizer;
 import jakarta.batch.api.chunk.AbstractItemReader;
+import jakarta.enterprise.context.Dependent;
 import jakarta.inject.Named;
 
 /**
  * @author Arun Gupta
  */
 @Named
+@Dependent
 public class MyItemReader extends AbstractItemReader {
 
     private final StringTokenizer tokens;

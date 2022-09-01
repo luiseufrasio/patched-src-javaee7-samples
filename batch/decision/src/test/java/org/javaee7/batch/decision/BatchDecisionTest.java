@@ -57,7 +57,6 @@ public class BatchDecisionTest {
         WebArchive war = ShrinkWrap.create(WebArchive.class)
             .addClass(BatchTestHelper.class)
             .addPackage("org.javaee7.batch.decision")
-            .addAsWebInfResource(EmptyAsset.INSTANCE, ArchivePaths.create("beans.xml"))
             .addAsResource("META-INF/batch-jobs/myJob.xml");
         System.out.println(war.toString(true));
         return war;

@@ -84,7 +84,6 @@ public class BatchChunkMapperTest {
         WebArchive war = create(WebArchive.class)
             .addClass(BatchTestHelper.class)
             .addPackage("org.javaee7.batch.sample.chunk.mapper")
-            .addAsWebInfResource(INSTANCE, ArchivePaths.create("beans.xml"))
             .addAsResource("META-INF/batch-jobs/myJob.xml")
             .addAsLibraries(awaitability());
 

@@ -43,12 +43,14 @@ package org.javaee7.batch.chunk.checkpoint;
 import java.util.concurrent.CountDownLatch;
 
 import jakarta.batch.api.chunk.AbstractCheckpointAlgorithm;
+import jakarta.enterprise.context.Dependent;
 import jakarta.inject.Named;
 
 /**
  * @author Arun Gupta
  */
 @Named
+@Dependent
 public class MyCheckpointAlgorithm extends AbstractCheckpointAlgorithm {
     
     public static CountDownLatch checkpointCountDownLatch = new CountDownLatch(10);

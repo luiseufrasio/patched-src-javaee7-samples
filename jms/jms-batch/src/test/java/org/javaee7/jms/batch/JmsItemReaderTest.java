@@ -54,7 +54,6 @@ public class JmsItemReaderTest {
     @Deployment
     public static WebArchive deployment() {
         return ShrinkWrap.create(WebArchive.class)
-            .addAsWebInfResource(EmptyAsset.INSTANCE, ArchivePaths.create("beans.xml"))
             .addClass(BatchTestHelper.class)
             .addPackage(JmsItemReader.class.getPackage())
             .addAsResource("META-INF/batch-jobs/jms-job.xml");

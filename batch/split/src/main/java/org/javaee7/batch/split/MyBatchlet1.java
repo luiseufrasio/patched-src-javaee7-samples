@@ -41,12 +41,14 @@
 package org.javaee7.batch.split;
 
 import jakarta.batch.api.AbstractBatchlet;
+import jakarta.enterprise.context.Dependent;
 import jakarta.inject.Named;
 
 /**
  * @author Arun Gupta
  */
 @Named
+@Dependent
 public class MyBatchlet1 extends AbstractBatchlet {
 
     @Override

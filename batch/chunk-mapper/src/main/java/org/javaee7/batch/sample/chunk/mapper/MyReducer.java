@@ -40,12 +40,14 @@
 package org.javaee7.batch.sample.chunk.mapper;
 
 import jakarta.batch.api.partition.PartitionReducer;
+import jakarta.enterprise.context.Dependent;
 import jakarta.inject.Named;
 
 /**
  * @author Arun Gupta
  */
 @Named
+@Dependent
 public class MyReducer implements PartitionReducer {
 
     @Override

@@ -46,12 +46,14 @@ import java.io.Serializable;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import jakarta.batch.api.chunk.AbstractItemReader;
+import jakarta.enterprise.context.Dependent;
 import jakarta.inject.Named;
 
 /**
  * @author Arun Gupta
  */
 @Named
+@Dependent
 public class MyItemReader extends AbstractItemReader {
 
     private BufferedReader reader;

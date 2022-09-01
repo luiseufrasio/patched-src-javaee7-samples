@@ -40,12 +40,14 @@
 package org.javaee7.batch.chunk.exception;
 
 import jakarta.batch.api.chunk.listener.SkipProcessListener;
+import jakarta.enterprise.context.Dependent;
 import jakarta.inject.Named;
 
 /**
  * @author Arun Gupta
  */
 @Named
+@Dependent
 public class MySkipProcessorListener implements SkipProcessListener {
     @Override
     public void onSkipProcessItem(Object t, Exception e) throws Exception {

@@ -34,8 +34,7 @@ public class MethodParametersConstraintsTest {
 
     @Deployment
     public static Archive<?> deployment() {
-        return ShrinkWrap.create(JavaArchive.class).addClasses(MyBean.class)
-            .addAsManifestResource(EmptyAsset.INSTANCE, "beans.xml");
+        return ShrinkWrap.create(JavaArchive.class).addClasses(MyBean.class);
     }
 
     @Test

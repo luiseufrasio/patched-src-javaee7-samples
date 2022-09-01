@@ -41,6 +41,7 @@ package org.javaee7.batch.sample.chunk.partition;
 
 import jakarta.batch.api.chunk.ItemProcessor;
 import jakarta.batch.runtime.context.JobContext;
+import jakarta.enterprise.context.Dependent;
 import jakarta.inject.Inject;
 import jakarta.inject.Named;
 
@@ -48,6 +49,7 @@ import jakarta.inject.Named;
  * @author Arun Gupta
  */
 @Named
+@Dependent
 public class MyItemProcessor implements ItemProcessor {
     public static int totalProcessors = 0;
     private int processorId;

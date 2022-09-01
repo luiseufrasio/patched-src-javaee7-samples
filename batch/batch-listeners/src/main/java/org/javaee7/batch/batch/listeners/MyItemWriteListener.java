@@ -42,12 +42,14 @@ package org.javaee7.batch.batch.listeners;
 
 import java.util.List;
 import jakarta.batch.api.chunk.listener.AbstractItemWriteListener;
+import jakarta.enterprise.context.Dependent;
 import jakarta.inject.Named;
 
 /**
  * @author Arun Gupta
  */
 @Named
+@Dependent
 public class MyItemWriteListener extends AbstractItemWriteListener {
 
     @Override

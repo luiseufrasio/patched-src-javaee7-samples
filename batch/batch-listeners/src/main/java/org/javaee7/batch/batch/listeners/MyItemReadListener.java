@@ -41,12 +41,14 @@
 package org.javaee7.batch.batch.listeners;
 
 import jakarta.batch.api.chunk.listener.AbstractItemReadListener;
+import jakarta.enterprise.context.Dependent;
 import jakarta.inject.Named;
 
 /**
  * @author Arun Gupta
  */
 @Named
+@Dependent
 public class MyItemReadListener extends AbstractItemReadListener {
 
     @Override
