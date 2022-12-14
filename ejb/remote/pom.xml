@@ -13,7 +13,6 @@
     <name>Java EE 7 Sample: ejb - remote</name>
 
     <modules>
-        <module>vendor</module>
         <module>roles-allowed</module>
     </modules>
 
